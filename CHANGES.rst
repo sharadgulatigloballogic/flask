@@ -40,6 +40,9 @@ Unreleased
     binary file instead. :issue:`4989`
 -   If a blueprint is created with an empty name it raises a ``ValueError``.
     :issue:`5010`
+-   Registering a blueprint with a ``name`` option that contains a dot raises a
+    ``ValueError``, matching the restriction on a blueprint's own name.
+    :issue:`4045`
 -   ``SESSION_COOKIE_DOMAIN`` does not fall back to ``SERVER_NAME``. The default is not
     to set the domain, which modern browsers interpret as an exact match rather than
     a subdomain match. Warnings about ``localhost`` and IP addresses are also removed.
